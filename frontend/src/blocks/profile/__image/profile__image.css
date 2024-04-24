@@ -1,0 +1,38 @@
+.profile__content {
+  grid-area: image;
+  position: relative;
+}
+
+.profile__image {
+  border-radius: 50%;
+  width: 127.5px;
+  height: 127.5px;
+  object-fit: cover;
+}
+
+/* .profile__image:hover {
+  opacity: 0.5;
+  cursor: pointer;
+} */
+
+.profile__imageEdit {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  z-index: -2;
+}
+/* .profile__image_edit:hover {
+  cursor: pointer;
+} */
+
+.profile__content:hover .profile__image {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.profile__content:hover .profile__imageEdit {
+  z-index: 1;
+  cursor: pointer;
+}

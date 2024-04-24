@@ -1,0 +1,187 @@
+.page {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "container"
+    "footer";
+  max-width: 880px;
+  min-width: 320px;
+  margin: 45px auto 0 auto;
+  font-family: "Inter";
+}
+
+body {
+  background-color: #000000;
+}
+
+.login {
+  display: grid;
+  justify-items: center;
+  font-family: "Inter";
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.login__format {
+  border-bottom: 1px solid #fffdfd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.login__labels {
+  color: white;
+}
+
+.login__title {
+  color: white;
+  font-size: 24px;
+}
+
+.login input {
+  background-color: #000000;
+  color: white;
+}
+
+.login__button-container {
+  display: flex;
+  justify-content: center;
+}
+.login__link {
+  width: 358px;
+  height: 50px;
+}
+
+.login__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.register {
+  display: grid;
+  justify-items: center;
+  font-family: "Inter";
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 430px;
+  height: 330px;
+
+  margin: 0;
+}
+
+.register__format {
+  border-bottom: 1px solid #fffdfd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.register__labels {
+  color: white;
+}
+
+.register__title {
+  color: white;
+  font-size: 24px;
+}
+
+.register input {
+  background-color: #000000;
+  color: white;
+}
+
+.register__button-container {
+  display: flex;
+  justify-content: center;
+}
+.register__link {
+  width: 358px;
+  height: 50px;
+}
+
+.register__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.signup__link {
+  color: white;
+}
+
+.signup__link:hover {
+  opacity: 0.85;
+}
+
+.register__login-link {
+  color: white;
+}
+
+.register__login-link:hover {
+  opacity: 0.85;
+}
+
+.regconf {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter";
+  place-content: center;
+  transition: all 0.2s linear;
+  /* opacity: 1; */
+  display: grid;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.regconf_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.regconf_container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  background: white;
+  width: 430px;
+  height: 330px;
+  border-radius: 20px;
+}
+
+.regconf__container-button {
+  position: relative;
+  right: -250px;
+  top: -70px;
+}
+
+.regconf__container-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.regconf__check {
+  display: grid;
+  justify-content: center;
+}
+
+.regconf__title {
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+.newcard__create {
+  height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: black;
+  color: #ffffff;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+.newcard__create:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

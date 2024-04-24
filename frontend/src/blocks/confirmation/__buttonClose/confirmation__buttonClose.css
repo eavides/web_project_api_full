@@ -1,0 +1,14 @@
+.confirmation__button {
+  border: 0 transparent;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.confirmation__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

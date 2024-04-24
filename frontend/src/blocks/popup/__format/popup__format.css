@@ -1,0 +1,8 @@
+.popup__format {
+  border: none;
+  border-bottom: 1px solid #0000001c;
+  margin-left: 36px;
+  margin-right: 36px;
+  color: #000000;
+  outline: none;
+}

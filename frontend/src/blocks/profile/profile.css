@@ -1,0 +1,9 @@
+.profile {
+  display: grid;
+  grid-template-areas: "image information information information information button add ";
+  /* display: flex;
+  flex-wrap: wrap;*/
+  align-items: center;
+  margin: 36px 0 36px 0;
+  gap: 18px;
+}

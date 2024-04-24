@@ -1,0 +1,8 @@
+.form__set {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 430px;
+  height: 330px;
+}

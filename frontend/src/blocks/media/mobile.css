@@ -1,0 +1,107 @@
+@media screen and (min-width: 320px) and (max-width: 699px) {
+  .page {
+    max-width: 100%;
+  }
+
+  /* .grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
+
+  .profile {
+    /* grid-template-areas:
+      "image"
+      "information"
+      "add";
+    justify-content: space-around; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid__card {
+    width: 100%;
+
+    max-width: 282px;
+    height: 361px;
+  }
+
+  .grid__card-image {
+    width: 100%;
+    height: 100%;
+    max-width: 282px;
+    max-height: 282px;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  .grid__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__name {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .profile__position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .profile__image {
+    margin-bottom: 26px;
+    margin-top: 38px;
+  }
+  .profile__add {
+    margin-top: 36px;
+  }
+
+  .profile__button-add {
+    /* transform: scale(2, 1); */
+    content: url(../../images/AddButton_mobile.svg);
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
+
+  .form {
+    width: 282px;
+    height: 322px;
+    margin-right: 0;
+  }
+
+  .popup {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+  }
+
+  .popup__container {
+    width: 282px;
+    height: 322px;
+  }
+
+  .newcard__container {
+    width: 282px;
+    height: 322px;
+  }
+
+  /* .newcard__form {
+    width: 282px;
+    height: 322px;
+  } */
+}

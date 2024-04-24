@@ -1,0 +1,6 @@
+.header__line {
+  border: 1px solid #545454;
+  width: 100%;
+  grid-column: col/ span 6;
+  grid-row: row 2;
+}

@@ -1,0 +1,5 @@
+.header__logo {
+  margin: 28px 0 32px 27px;
+  grid-column: col / span 2;
+  grid-row: row;
+}

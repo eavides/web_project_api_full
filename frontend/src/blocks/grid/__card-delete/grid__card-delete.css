@@ -1,0 +1,20 @@
+.grid__card-delete {
+  /* visibility: hidden;
+    display: none; */
+  border: none;
+  background: url(../../../images/delete.svg) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 1;
+  /* transition: 0.3s; */
+}
+
+.grid__card-delete:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

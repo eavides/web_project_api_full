@@ -1,0 +1,10 @@
+.imgdisplay__container-button {
+  position: absolute;
+  right: -35px;
+  top: -35px;
+}
+
+.imgdisplay__container-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

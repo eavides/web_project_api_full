@@ -1,0 +1,30 @@
+.header {
+  grid-area: header;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, [col] 130px);
+  grid-template-rows: repeat(2, [row] auto);
+  justify-content: center;
+  font-family: "Inter";
+}
+
+.header__email {
+  grid-column: col 4;
+  grid-row: row;
+  font-size: 18px;
+  color: white;
+  align-content: center;
+}
+.header__session {
+  align-content: center;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  grid-column: col 6;
+  grid-row: row;
+}
+
+.header__session:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

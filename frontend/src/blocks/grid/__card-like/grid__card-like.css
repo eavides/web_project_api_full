@@ -1,0 +1,27 @@
+.grid__card-like {
+  /* visibility: hidden;
+  display: none; */
+  border: none;
+  background: url(../../../images/heart.svg) center no-repeat;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
+}
+
+.grid__card-like:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.grid__card-like_active {
+  opacity: 1;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: url(../../../images/heart_black.svg) center no-repeat;
+}
+
+.grid__card-like_active:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.confirmation__container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  width: 430px;
+  height: 330px;
+  margin: 200px auto 0 auto;
+  position: relative;
+}
