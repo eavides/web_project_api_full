@@ -45,10 +45,12 @@ function App() {
 
   useEffect(() => {
     const login = localStorage.getItem("token");
+    // console.log(login, "aca el lodgggin");
     if (login) {
       console.log("entro aca");
       auth.getContent(login).then((res) => {
-        setEmail(res.data.email);
+        // setEmail(res.data.email);
+        setEmail(res.email);
         setToken(true);
       });
     }

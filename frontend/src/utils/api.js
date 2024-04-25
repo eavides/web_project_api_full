@@ -1,8 +1,13 @@
+const login = localStorage.getItem("token");
 class Api {
   constructor() {
-    this._urlBase = "https://around.nomoreparties.co/v1/web_es_05";
-    this.BASE_URL = "https://register.nomoreparties.co";
-    this._authorization = "a0471525-76a0-442d-afa2-307d9b782544";
+    // this._urlBase = "https://around.nomoreparties.co/v1/web_es_05";
+    // this.BASE_URL = "https://register.nomoreparties.co";
+    // this._authorization = "a0471525-76a0-442d-afa2-307d9b782544";
+
+    this._urlBase = "https://api.sp16ep.theluong.com";
+    this.BASE_URL = "https://api.sp16ep.theluong.com";
+    this._authorization = this.token;
   }
 
   async fetcher(url, method, body) {
@@ -14,8 +19,9 @@ class Api {
       method,
       body: JSON.stringify(body),
     });
-
+    console.log(data, "antes del iff");
     if (data.ok) {
+      console.log(data);
       return data.json();
     }
   }
@@ -105,9 +111,12 @@ class Api {
 }
 
 const api = new Api({
-  address: "https://nomoreparties.co",
+  address: "https://sp16ep.theluong.com",
   groupId: `cohort08`, // CHANGE IT WITH YOUR COHORT
-  token: `a0471525-76a0-442d-afa2-307d9b782544`, // CHANGE IT WITH YOUR TOKEN
+  token: login,
+  // address: "https://nomoreparties.co",
+  // groupId: `cohort08`, // CHANGE IT WITH YOUR COHORT
+  //token: `a0471525-76a0-442d-afa2-307d9b782544`, // CHANGE IT WITH YOUR TOKEN
 });
 
 export default api;

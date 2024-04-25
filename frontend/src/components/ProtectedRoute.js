@@ -11,7 +11,7 @@ function ProtectedRoute({ children, loggedIn, token, setEmail, ...props }) {
       auth
         .getContent(login)
         .then((res) => {
-          setEmail(res.data.email);
+          setEmail(res.email);
           history.push("/");
         })
         .catch((err) => console.log(err));
