@@ -1,5 +1,6 @@
 const express = require("express");
 const router = require("./routes/users.js");
+require("dotenv").config();
 const controllers = require("./controllers/users.js");
 const routerCard = require("./routes/cards.js");
 const { PORT = 3000 } = process.env;
@@ -10,6 +11,7 @@ const auth = require("./middlewares/auth");
 const { errors } = require("celebrate");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
 const cors = require("cors");
+
 mongoose
   .connect("mongodb://127.0.0.1:27017/aroundb")
   .then(() => {
