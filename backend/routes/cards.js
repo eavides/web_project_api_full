@@ -22,6 +22,7 @@ cardRouter.post(
     body: Joi.object().keys({
       name: Joi.string().min(2).max(30),
       link: Joi.string().required().custom(validateURL),
+      likes: Joi.array().items(Joi.string()),
     }),
   }),
   createCard
