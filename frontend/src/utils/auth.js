@@ -1,6 +1,3 @@
-// export const BASE_URL = "https://register.nomoreparties.co";
-// export const BASE_ANT = "https://around.nomoreparties.co/v1/web_es_05";
-
 export const BASE_URL = "https://api.sp16ep.theluong.com";
 export const BASE_ANT = "https://api.sp16ep.theluong.com";
 

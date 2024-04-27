@@ -12,8 +12,8 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   const [descriptionErrorMessage, setDescriptionErrorMessage] = useState("");
 
   useEffect(() => {
-    setName(currentUser.name || "");
-    setDescription(currentUser.about || "");
+    setName(currentUser?.name || "");
+    setDescription(currentUser?.about || "");
     setIsNameValids(true);
     setIsDescriptionValids(true);
     setNameErrorMessage("");

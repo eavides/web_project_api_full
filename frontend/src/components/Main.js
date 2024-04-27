@@ -24,7 +24,7 @@ function Main({
           <img
             alt="Imagen de perfil"
             className="profile__image"
-            src={userContext.avatar}
+            src={userContext?.avatar}
           />
           <img
             alt="Icono editar"
@@ -36,8 +36,8 @@ function Main({
 
         <div className="profile__information">
           <div id="infoGroup">
-            <h1 className="profile__name">{userContext.name}</h1>
-            <h2 className="profile__position">{userContext.about}</h2>
+            <h1 className="profile__name">{userContext?.name}</h1>
+            <h2 className="profile__position">{userContext?.about}</h2>
           </div>
         </div>
         <div className="profile__buttonEdit">
@@ -62,7 +62,7 @@ function Main({
       </section>
       <section className="grid">
         <div className="grid__container">
-          {cardContext.map((item) => {
+          {cardContext?.map((item) => {
             return (
               <Card
                 key={item._id}

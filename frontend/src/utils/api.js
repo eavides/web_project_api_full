@@ -1,27 +1,23 @@
 const login = localStorage.getItem("token");
 class Api {
   constructor() {
-    // this._urlBase = "https://around.nomoreparties.co/v1/web_es_05";
-    // this.BASE_URL = "https://register.nomoreparties.co";
-    // this._authorization = "a0471525-76a0-442d-afa2-307d9b782544";
-
     this._urlBase = "https://api.sp16ep.theluong.com";
     this.BASE_URL = "https://api.sp16ep.theluong.com";
     this._authorization = this.token;
   }
 
   async fetcher(url, method, body) {
+    const login = localStorage.getItem("token");
     const data = await fetch(url, {
       headers: {
-        authorization: this._authorization,
+        authorization: `Bearer ${login}`,
         "Content-Type": "application/json",
       },
       method,
       body: JSON.stringify(body),
     });
-    console.log(data, "antes del iff");
+
     if (data.ok) {
-      console.log(data);
       return data.json();
     }
   }
@@ -76,7 +72,7 @@ class Api {
   async likeCard(body, id) {
     try {
       return await this.fetcher(
-        `${this._urlBase}/cards/likes/${id}`,
+        `${this._urlBase}/cards/${id}/likes`,
         "PUT",
         body
       );
@@ -88,7 +84,7 @@ class Api {
   async unlikeCard(body, id) {
     try {
       return await this.fetcher(
-        `${this._urlBase}/cards/likes/${id}`,
+        `${this._urlBase}/cards/${id}/likes`,
         "DELETE",
         body
       );
