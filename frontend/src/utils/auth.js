@@ -19,7 +19,7 @@ export const register = (password, email) => {
     })
     .catch((err) => {
       console.log("Error registering:", err);
-      throw err; // Propagate the error further
+      throw err;
     });
 };
 

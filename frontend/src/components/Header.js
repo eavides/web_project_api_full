@@ -2,11 +2,18 @@ import logo from "../images/Logo.png";
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function Header({ email }) {
+function Header({
+  email,
+  isAuthenticated,
+  setIsAuthenticated,
+  setIsRegistered,
+}) {
   const history = useHistory();
   function signOut() {
     localStorage.removeItem("token");
     history.push("/login");
+    setIsAuthenticated(false);
+    setIsRegistered(false);
   }
   return (
     <header className="header">

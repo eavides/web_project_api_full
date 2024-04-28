@@ -18,11 +18,14 @@ function ProtectedRoute({ children, loggedIn, token, setEmail, ...props }) {
     }
   }
   function logged(loggedIn) {
-    if (loggedIn === false) {
-      checkToken(token);
-    } else {
+    if (!loggedIn === false) {
       checkToken(token);
     }
+    // if (loggedIn === false) {
+    //   //checkToken(token);
+    // } else {
+    //   checkToken(token);
+    // }
   }
   logged(loggedIn);
   return (

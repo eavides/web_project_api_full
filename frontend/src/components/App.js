@@ -35,25 +35,24 @@ function App() {
     api.getCards().then((res) => {
       setCards(res);
     });
-  }, []);
+  }, [isAuthenticated]);
 
   useEffect(() => {
     api.getUserInfo().then((res) => {
       setCurrentUser(res);
     });
-  }, []);
+  }, [isAuthenticated]);
 
   useEffect(() => {
     const login = localStorage.getItem("token");
-    // console.log(login, "aca el lodgggin");
+
     if (login) {
       auth.getContent(login).then((res) => {
-        // setEmail(res.data.email);
         setEmail(res.email);
         setToken(true);
       });
     }
-  }, []);
+  }, [isAuthenticated]);
 
   useEffect(() => {
     function handleOverlayClose(evt) {
@@ -209,7 +208,12 @@ function App() {
             <div className="page">
               <CardContext.Provider value={cards}>
                 {/* <CurrentUserContext.Provider value={currentUser}> */}
-                <Header email={email} />
+                <Header
+                  email={email}
+                  isAuthenticated={isAuthenticated}
+                  setIsAuthenticated={setIsAuthenticated}
+                  setIsRegistered={setIsRegistered}
+                />
                 <Main
                   onEditProfileClick={handleEditProfileClick}
                   onAddPlaceClick={handleAddPlaceClick}
