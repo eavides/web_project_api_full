@@ -9,11 +9,12 @@ function Header({
   setIsRegistered,
 }) {
   const history = useHistory();
+
   function signOut() {
     localStorage.removeItem("token");
     history.push("/login");
-    setIsAuthenticated(false);
-    setIsRegistered(false);
+    // setIsAuthenticated(false);
+    // setIsRegistered(false);
   }
   return (
     <header className="header">

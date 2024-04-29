@@ -3,10 +3,8 @@ import { Route, Redirect, useHistory } from "react-router-dom";
 import * as auth from "../utils/auth.js";
 function ProtectedRoute({ children, loggedIn, token, setEmail, ...props }) {
   const history = useHistory();
-
+  const login = localStorage.getItem("token");
   function checkToken(token) {
-    const login = localStorage.getItem("token");
-
     if (token === false) {
       auth
         .getContent(login)
@@ -18,12 +16,10 @@ function ProtectedRoute({ children, loggedIn, token, setEmail, ...props }) {
     }
   }
   function logged(loggedIn) {
-    if (!loggedIn === false) {
+    if (login) {
       checkToken(token);
     }
-    // if (loggedIn === false) {
-    //   //checkToken(token);
-    // } else {
+    // if (!loggedIn === false) {
     //   checkToken(token);
     // }
   }

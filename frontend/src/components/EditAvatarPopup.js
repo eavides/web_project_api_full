@@ -13,7 +13,11 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-
+    if (avatarRef.current.value === "") {
+      setIsAvatarLinkValid(false);
+      setAvatarLinkErrorMessage("Completar campos");
+      return;
+    }
     onUpdateAvatar({
       avatar: avatarRef.current.value,
     });
