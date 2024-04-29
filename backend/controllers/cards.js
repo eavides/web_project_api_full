@@ -58,26 +58,10 @@ module.exports.deleteCard = (req, res) => {
           .send({ message: "No posee autorizacion de eliminar card" });
       }
     });
-
-  // Card.findByIdAndDelete(req.params.id)
-  //   .orFail()
-  //   .then((card) => {
-  //     console.log(card.owner, "owner card deleted");
-  //     res.send(card);
-  //   })
-  //   .catch((error) => {
-  //     const ERROR_CODE = 400;
-  //     if (error.name === "SomeErrorName")
-  //       return res.status(ERROR_CODE).send({
-  //         message: "tarjeta o usuario no encontrado",
-  //       });
-  //   });
 };
 
 module.exports.likeCard = (req, res) => {
   const update = { $addToSet: { likes: req.user._id } };
-  console.log(req.params.id);
-  console.log(update);
 
   Card.findByIdAndUpdate({ _id: req.params.id }, update, { new: true })
     .orFail()

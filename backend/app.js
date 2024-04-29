@@ -24,31 +24,6 @@ mongoose
 app.use(cors());
 app.options("*", cors());
 
-// const allowedCors = [
-//   "https://sp16ep.theluong.com",
-//   "http://www.sp16ep.theluong.com",
-//   "localhost:3000",
-// ];
-// app.use(function (req, res, next) {
-//   const { origin } = req.headers;
-
-//   if (allowedCors.includes(origin)) {
-//     res.header("Access-Control-Allow-Origin", origin);
-//   }
-
-//   res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
-
-//   if (req.method === "OPTIONS") {
-//     const requestHeaders = req.headers["access-control-request-headers"];
-
-//     res.header("Access-Control-Allow-Headers", requestHeaders);
-
-//     return res.end();
-//   }
-
-//   next();
-// });
-
 app.use(express.json());
 
 app.use(requestLogger);

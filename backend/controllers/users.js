@@ -90,12 +90,8 @@ module.exports.updateAvatar = (req, res) => {
 };
 
 module.exports.login = (req, res) => {
-  // const body = req.body;
-  // const { email } = body.email;
-  // const { password } = body.password;
-
   const { email, password } = req.body;
-  console.log(password);
+
   return User.findUserByCredentials(email, password)
     .then((user) => {
       const token = jwt.sign(
@@ -113,7 +109,6 @@ module.exports.login = (req, res) => {
 };
 
 module.exports.meUser = (req, res) => {
-  console.log(req.user, "solicitud del user");
   const userId = req.user._id;
   User.findOne({ _id: userId })
     .orFail()

@@ -18,10 +18,12 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
     setCardsNameErrorMessage("");
     setCardsImageLinkErrorMessage("");
   }, [isOpen]);
+
   const handleTitleChange = (evt) => {
     const { value, validity, validationMessage } = evt.target;
     setCardsName(value);
     setIsCardsNameValid(validity.valid);
+
     if (!validity.valid) {
       setCardsNameErrorMessage(validationMessage);
     } else {
@@ -42,7 +44,13 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    onAddPlace({ name: cardsName, link: cardsImageLink });
+    if (cardsName === "" && cardsImageLink === "") {
+      setIsCardsImageLinkValid(false);
+      setCardsImageLinkErrorMessage("Completar campos");
+      return;
+    } else {
+      onAddPlace({ name: cardsName, link: cardsImageLink });
+    }
   }
 
   return (

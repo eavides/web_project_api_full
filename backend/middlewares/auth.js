@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
   }
 
   const token = authorization.replace("Bearer ", "");
-  console.log(NODE_ENV);
+
   let payload;
 
   try {
@@ -24,10 +24,9 @@ module.exports = (req, res, next) => {
       NODE_ENV === "production" ? JWT_SECRET : "dev-secret"
     );
   } catch (e) {
-    console.log(e);
     return handleAuthError(500);
   }
-  console.log(payload, " paylooooad");
+
   req.user = payload;
 
   next();

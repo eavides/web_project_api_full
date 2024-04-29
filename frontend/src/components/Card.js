@@ -3,8 +3,7 @@ import CurrentUserContext from "../contexts/CurrentUserContext.js";
 
 function Card({ card, onCardC, onCardLike, onCardDelete }) {
   const userContext = React.useContext(CurrentUserContext);
-  // console.log(card);
-  // console.log(userContext);
+
   let cardLikeButtonClassName = "";
   let cardDeleteButtonClassName = "";
   let isLiked = false;
@@ -26,7 +25,6 @@ function Card({ card, onCardC, onCardLike, onCardDelete }) {
       isLiked ? "grid__card-like_active" : "grid__card-like"
     }`;
   }
-  // const isOwn = card.owner === userContext._id;
 
   function handleClick() {
     return onCardC(card);
