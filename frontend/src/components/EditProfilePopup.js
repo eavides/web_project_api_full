@@ -45,7 +45,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (name === "" && description === "") {
+    if (name === "" || description === "") {
       return;
     }
     onUpdateUser({
